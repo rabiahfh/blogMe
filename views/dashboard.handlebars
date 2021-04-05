@@ -1,0 +1,315 @@
+{{> navbar}}
+<div class="main-content">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">BLOG ME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> <br>
+
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search this blog">
+        <div class="input-group-append">
+          <button class="btn btn-secondary" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+<div class="header" id = "blog-info" data-id = {{id}}>
+  <h1>{{title}} </h1>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <div class="card gedf-card">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts"
+                aria-selected="true">Make
+                a publication</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="images-tab" data-toggle="tab" role="tab" aria-controls="images"
+                aria-selected="false" href="#images">Images</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+              <div class="form-group">
+                <input class="form-control mb-2" id="post-title" type= "text" placeholder="Post-title">
+                <label class="sr-only" for="message">post</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="What are you thinking?"></textarea>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
+              <div class="form-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFile">
+                  <label class="custom-file-label" for="customFile">Upload image</label>
+                </div>
+              </div>
+              <div class="py-4"></div>
+            </div>
+          </div>
+
+          <div class="btn-toolbar justify-content-between">
+            <div class="btn-group" >
+              <button type="submit" class="btn btn-primary" id= "add-post-btn">Add Post</button>
+
+
+            </div>
+            <div class="btn-group">
+              {{!--
+              <!-- Like/dislike Button -->
+              <span class="likebtn-wrapper" data-white_label="true" data-identifier="item_1"
+                data-counter_show="false"></span>
+              <script>(function (d, e, s) { if (d.getElementById("likebtn_wjs")) return; a = d.createElement(e); m = d.getElementsByTagName(e)[0]; a.async = 1; a.id = "likebtn_wjs"; a.src = s; m.parentNode.insertBefore(a, m) })(document, "script", "//w.likebtn.com/js/w/widget.js");</script>
+              --}}
+
+
+              <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-globe"></i> Public
+              </button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="#"><i class="fa fa-globe"></i> Public</a>
+                <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Friends</a>
+                <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Just me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+              </div>
+              <div class="tab-pane fade" id="images" role="tabpanel" aria-labelledby="images-tab">
+                <div class="form-group">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Upload image</label>
+                  </div>
+                </div>
+                <div class="py-4"></div>
+              </div>
+            </div>
+
+            {{!-- <div class="btn-toolbar justify-content-between">
+              <div class="btn-group">
+                <button type="submit" class="btn btn-primary">Add Post</button>
+
+
+
+              </div> --}}
+              {{!-- <div class="btn-group">
+                <!-- Like/dislike Button -->
+                <span class="likebtn-wrapper" data-white_label="true" data-identifier="item_1"
+                  data-counter_show="false"></span>
+                <script>(function (d, e, s) { if (d.getElementById("likebtn_wjs")) return; a = d.createElement(e); m = d.getElementsByTagName(e)[0]; a.async = 1; a.id = "likebtn_wjs"; a.src = s; m.parentNode.insertBefore(a, m) })(document, "script", "//w.likebtn.com/js/w/widget.js");</script>
+
+
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-globe"></i> Public
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <a class="dropdown-item" href="#"><i class="fa fa-globe"></i> Public</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Friends</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Just me</a>
+                </div> --}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      {{!-- <div class="card">
+        <h2>COMMENTS</h2>
+        <div class="card my-4">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div> --}}
+
+
+
+
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>ABOUT ME</h2>
+
+        <div class="container mt-5 d-flex justify-content-center">
+          <div class="card p-3">
+            <div class="d-flex align-items-center">
+              <div class="image"> <img
+                  src="https://i.pinimg.com/originals/66/dc/16/66dc16737b1f9ac15e04ca88fabf0db0.jpg" class="rounded"
+                  width="155"> </div>
+              <div class="ml-3 w-100">
+                <h4 class="mb-0 mt-0">Bruce Wayne</h4> <span>Super Hero by Night</span>
+                <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+                  <div class="d-flex flex-column"> <span class="articles">Blog Posts</span> <span
+                      class="number1">1</span>
+                  </div>
+                  <div class="d-flex flex-column"> <span class="followers">Followers</span> <span
+                      class="number2">3</span> </div>
+                  <div class="d-flex flex-column"> <span class="rating">Rating</span> <span class="number3">7.2</span>
+                  </div>
+                  <div class="button mt-2 d-flex flex-row align-items-center"> <button
+                      class="btn btn-sm btn-outline-primary w-100">Chat</button> <button
+                      class="btn btn-sm btn-primary w-100 ml-2">Follow</button> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <div class="card">
+        <h3>RECENT POSTS</h3>
+
+        {{!-- <button type="submit" class="btn btn-primary">Edit Post</button>
+        <button type="submit" class="btn btn-primary">Delete Post</button> --}}
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <div id= "userpostdiv"></div>
+              {{!-- <div class="post-preview">
+                <a href="post.html">
+                  <h2 class="post-title">
+                    How to be a 24/7 mom with no fail, trial....
+                  </h2>
+                  <h3 class="post-subtitle">
+                    Between nursing, cooking, and keeping a happy face..
+                  </h3>
+                  
+                </a>
+                <p class="post-meta">Posted by
+                  <a href="#">UserMom</a>
+                  on March 27, 2021
+                </p>
+                
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+              </div>
+              <hr>
+              <div class="post-preview">
+                <a href="post.html">
+                  <h2 class="post-title">
+                    People think that being a dad is easy, but it's actually tougher than neuroscience....
+                  </h2>
+                </a>
+                <p class="post-meta">Posted by
+                  <a href="#">UserDad</a>
+                  on March 26, 2021
+                </p>
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+              </div>
+              <hr>
+              <div class="post-preview">
+                <a href="post.html">
+                  <h2 class="post-title">
+                    To be or not to be...
+                  </h2>
+                  <h3 class="post-subtitle">
+                    Twas the question I asked when I was born. Oh, the saga of being a child.
+                  </h3>
+                </a>
+                <p class="post-meta">Posted by
+                  <a href="#">UserChild</a>
+                  on March 25, 2021
+                </p>
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+              </div>
+              <hr>
+              <div class="post-preview">
+                <a href="post.html">
+                  <h2 class="post-title">
+                    Failure is not an option
+                  </h2>
+                  <h3 class="post-subtitle">
+                    Many say exploration is part of our destiny, but it’s actually our duty to future generations.
+                  </h3>
+                </a>
+                <p class="post-meta">Posted by
+                  <a href="#">UserRandom</a>
+                  on March 20, 2021
+                </p>
+                <button onclick="myFunction()" id="myBtn">Read more</button>
+              </div>
+              <hr> --}}
+              <!-- Pager -->
+              <div class="clearfix">
+                <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+        </div>
+        {{!-- <div class="card">
+          <h3>Share on Social Media</h3>
+          <!-- social buttons -->
+          <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+            <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_email"></a>
+            <a class="a2a_button_wordpress"></a>
+            <a class="a2a_button_whatsapp"></a>
+          </div>
+          <script async src="https://static.addtoany.com/menu/page.js"></script>
+          <!-- social buttons -->
+
+        </div> --}}
+      </div>
+      <div class="card">
+        <h3>Share on Social Media</h3>
+        <!-- social buttons -->
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+          <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+          <a class="a2a_button_facebook"></a>
+          <a class="a2a_button_twitter"></a>
+          <a class="a2a_button_email"></a>
+          <a class="a2a_button_wordpress"></a>
+          <a class="a2a_button_whatsapp"></a>
+        </div>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <!-- social buttons -->
+
+      <div class="footer">
+        <p>Thank you for visiting Blog Me</p>
+      </div>
+    </div>

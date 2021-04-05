@@ -1,0 +1,36 @@
+{
+  "name": "post-author-joins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "mysql2": "^1.6.4",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^4.41.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramyamariyala/BlogMe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ramyamariyala/BlogMe/issues"
+  },
+  "homepage": "https://github.com/Ramyamariyala/BlogMe#readme"
+}
